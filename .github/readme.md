@@ -1,6 +1,5 @@
 # Find & Replace
 
----
 ### Features
 - Any valid file type.
 - Any valid file size.
