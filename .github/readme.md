@@ -6,5 +6,6 @@
 
 ---
 ### Features
-- Any file size.
-- 
+- Any valid file type.
+- Any valid file size.
+- No limits of any sort.
