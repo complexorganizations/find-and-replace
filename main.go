@@ -32,7 +32,7 @@ func visit(path string, fi os.FileInfo, err error) error {
                 }
                 //fmt.Println(string(read))
                 fmt.Println(path)
-
+                // change it here.
                 newContents := strings.Replace(string(read), "old", "new", -1)
 
                 fmt.Println(newContents)
