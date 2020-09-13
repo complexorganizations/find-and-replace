@@ -19,3 +19,5 @@ Whats the largest file this will work with?
 
 Can i use this with any file type?
 - As long as its a valid file it will work
+
+---
