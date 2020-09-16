@@ -1,7 +1,6 @@
 package main
 
 import (
-        "fmt"
         "io/ioutil"
         "log"
         "strings"
@@ -37,10 +36,5 @@ func main() {
         // if there is a error print it
         if err != nil {
                 log.Fatalln(err)
-        }
-
-        // show the sucessful msg
-        if newContents {
-                fmt.Println("Completed")
         }
 }
