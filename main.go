@@ -10,9 +10,9 @@ var (
 	// the location of the file.
 	filePath  = "./example.json"
 	// the string your trying to change.
-	oldString = "This is the old string we are trying to change."
+	oldString = "THIS IS THE OLD STRING."
 	// the new string you want to replace it with.
-	newString = "This is the string the old one is going to replace."
+	newString = "THIS IS THE NEW STRING."
 )
 
 func main() {
