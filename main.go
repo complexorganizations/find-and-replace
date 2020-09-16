@@ -9,6 +9,7 @@ import (
 )
 
 var (
+	fileDir   = "/home/example/"
 	filePath  = "/home/example/example.json"
 	oldString = "old"
 	newString = "new"
@@ -20,11 +21,7 @@ func visit(path string, fi os.FileInfo, err error) error {
 		return err
 	}
 
-	if !!fi.IsDir() {
-		return nil //
-	}
-
-	matched, err := os.Open((filePath))
+	matched, err := os.Open(fileDir)
 
 	if err != nil {
 		panic(err)
@@ -32,7 +29,7 @@ func visit(path string, fi os.FileInfo, err error) error {
 	}
 
 	if matched {
-		read, err := ioutil.ReadFile(path)
+		read, err := ioutil.ReadFile(filePath)
 		if err != nil {
 			panic(err)
 		}
@@ -41,7 +38,7 @@ func visit(path string, fi os.FileInfo, err error) error {
 		// change it here.
 		newContents := strings.Replace(string(read), (oldString), (newString), -1)
 
-		fmt.Println(newContents)
+		// fmt.Println(newContents)
 
 		err = ioutil.WriteFile(path, []byte(newContents), 0)
 		if err != nil {
