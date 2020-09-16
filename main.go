@@ -1,58 +1,34 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
-	"os"
-	"path/filepath"
+	"log"
 	"strings"
 )
 
 var (
-	fileDir   = "/home/example/"
 	filePath  = "/home/example/example.json"
 	oldString = "old"
 	newString = "new"
 )
 
-func visit(path string, fi os.FileInfo, err error) error {
-
-	if err != nil {
-		return err
-	}
-
-	matched, err := os.Open(fileDir)
-
-	if err != nil {
-		panic(err)
-		return err
-	}
-
-	if matched {
-		read, err := ioutil.ReadFile(filePath)
-		if err != nil {
-			panic(err)
-		}
-		//fmt.Println(string(read))
-		fmt.Println(path)
-		// change it here.
-		newContents := strings.Replace(string(read), (oldString), (newString), -1)
-
-		// fmt.Println(newContents)
-
-		err = ioutil.WriteFile(path, []byte(newContents), 0)
-		if err != nil {
-			panic(err)
-		}
-
-	}
-
-	return nil
-}
-
 func main() {
-	err := filepath.Walk(".", visit)
+	// lets read the file
+	read, err := ioutil.ReadFile(filePath)
+
+	// if there is a error reading the file than we show the error using the log package
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
+	}
+
+	// replace the current old string with the new string
+	newContents := strings.Replace(string(read), (oldString), (newString), -1)
+
+	// write the new string
+	err = ioutil.WriteFile(filePath, []byte(newContents), 0)
+
+	// if there is a error print it
+	if err != nil {
+		log.Fatalln(err)
 	}
 }
