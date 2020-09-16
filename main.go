@@ -7,9 +7,9 @@ import (
 )
 
 var (
-	filePath  = "/home/example/example.json"
-	oldString = "old"
-	newString = "new"
+	filePath  = "./example.json"
+	oldString = "This is the old string we are trying to change."
+	newString = "This is the string the old one is going to replace."
 )
 
 func main() {
