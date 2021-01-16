@@ -1,5 +1,7 @@
 # Find & Replace
 
+#### This project is part of [system-manager](https://github.com/complexorganizations/system-manager) ***Archived***
+
 ### Features
 - Any valid file type.
 - Any valid file size.
