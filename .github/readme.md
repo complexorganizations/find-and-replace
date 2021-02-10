@@ -9,6 +9,7 @@
 
 ---
 ### FAQ's
+
 Why did u you need this?
 - When u are working with a large file (50GB+) `sed` or other tools like that don't work and u get a `INT_MAX` error.
 
@@ -17,5 +18,3 @@ Whats the largest file this will work with?
 
 Can i use this with any file type?
 - As long as its a valid file it will work
-
----
